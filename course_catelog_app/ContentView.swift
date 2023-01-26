@@ -7,28 +7,54 @@
 
 import SwiftUI
 
+var rupeeSymbol:String = "\u{20B9}"
+
 struct ContentView: View {
+
+    var mockData: [MockTest] = MockTestList.mockDataList
     
-    var rupeeSymbol:String = "\u{20B9}";
     
     var body: some View {
-        HStack {
-            Image("mt-1")
-                .resizable()
-                .scaledToFit()
-                .frame(height:95)
-                .padding(.trailing, 10)
-            
-            VStack(alignment: .leading, spacing: 30) {
-                Text("Course A preparation Mock test")
-                    .fontWeight(.medium)
-                    .font(.headline)
-                
-                Text("\(rupeeSymbol) 499")
-                    .fontWeight(.medium)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                
+        NavigationView {
+            List(mockData, id: \.id) { item in
+                NavigationLink(
+                    destination: MockTextDetailsView(mockTestData: item)) {
+                    HStack {
+                        Image(item.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:100)
+                        .padding(.trailing, 10)
+                        
+                        VStack(alignment: .leading, spacing: 20) {
+                            Text(item.title)
+                                .fontWeight(.medium)
+                                .font(.headline)
+                            
+                            HStack(spacing: 3) {
+                                if (item.sellingPrice != "Free") {
+                                    Text(rupeeSymbol)
+                                        .fontWeight(.medium)
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
+                                
+                                
+                                Text(item.originalPrice)
+                                    .fontWeight(.medium)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                    .strikethrough()
+                                
+                                Text(item.sellingPrice)
+                                    .fontWeight(.medium)
+                                    .font(.subheadline)
+                                    .foregroundColor(item.sellingPrice == "FREE" ? .green : .gray)
+                            }
+                            
+                        }
+                    }
+                }
             }
         }
     }

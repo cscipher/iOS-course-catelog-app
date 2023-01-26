@@ -12,6 +12,7 @@
 		DF5AC5B5297D4F3400C9E657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5AC5B4297D4F3400C9E657 /* Assets.xcassets */; };
 		DF5AC5B9297D4F3400C9E657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5AC5B8297D4F3400C9E657 /* Preview Assets.xcassets */; };
 		DFAD9175297D57DE0031E57F /* MockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD9174297D57DE0031E57F /* MockTest.swift */; };
+		DFAD9177297D60860031E57F /* MockTextDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD9176297D60860031E57F /* MockTextDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DF5AC5B6297D4F3400C9E657 /* course_catelog_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = course_catelog_app.entitlements; sourceTree = "<group>"; };
 		DF5AC5B8297D4F3400C9E657 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAD9174297D57DE0031E57F /* MockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTest.swift; sourceTree = "<group>"; };
+		DFAD9176297D60860031E57F /* MockTextDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTextDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DF5AC5B0297D4F3300C9E657 /* course_catelog_appApp.swift */,
 				DF5AC5B2297D4F3300C9E657 /* ContentView.swift */,
+				DFAD9176297D60860031E57F /* MockTextDetailsView.swift */,
 				DFAD9174297D57DE0031E57F /* MockTest.swift */,
 				DF5AC5B4297D4F3400C9E657 /* Assets.xcassets */,
 				DF5AC5B6297D4F3400C9E657 /* course_catelog_app.entitlements */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAD9177297D60860031E57F /* MockTextDetailsView.swift in Sources */,
 				DF5AC5B3297D4F3300C9E657 /* ContentView.swift in Sources */,
 				DF5AC5B1297D4F3300C9E657 /* course_catelog_appApp.swift in Sources */,
 				DFAD9175297D57DE0031E57F /* MockTest.swift in Sources */,
